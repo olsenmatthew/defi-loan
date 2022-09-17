@@ -30300,6 +30300,16 @@ paths:
           in: query
           required: false
           type: boolean
+        - name: pagination.reverse
+          description: >-
+            reverse is set to true if results are to be returned in the
+            descending order.
+
+
+            Since: cosmos-sdk 0.43
+          in: query
+          required: false
+          type: boolean
       tags:
         - Query
   '/loan/loan/loan/{id}':
@@ -51797,6 +51807,8 @@ definitions:
       lender:
         type: string
   loan.loan.MsgApproveLoanResponse:
+    type: object
+  loan.loan.MsgCancelLoanResponse:
     type: object
   loan.loan.MsgLiquidateLoanResponse:
     type: object
